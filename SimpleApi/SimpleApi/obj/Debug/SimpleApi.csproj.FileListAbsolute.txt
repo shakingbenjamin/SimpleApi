@@ -347,3 +347,7 @@ C:\GitLocal\SimpleApi\SimpleApi\SimpleApi\obj\Debug\SimpleApi.csproj.CoreCompile
 C:\GitLocal\SimpleApi\SimpleApi\SimpleApi\obj\Debug\SimpleApi.csproj.CopyComplete
 C:\GitLocal\SimpleApi\SimpleApi\SimpleApi\obj\Debug\SimpleApi.dll
 C:\GitLocal\SimpleApi\SimpleApi\SimpleApi\obj\Debug\SimpleApi.pdb
+C:\GitLocal\SimpleApi\SimpleApi\SimpleApi\obj\Debug\SimpleApi.csprojAssemblyReference.cache
+C:\GitLocal\SimpleApi\SimpleApi\SimpleApi\obj\Debug\SimpleApi.Migrations.InitialCreate.resources
+C:\GitLocal\SimpleApi\SimpleApi\SimpleApi\obj\Debug\SimpleApi.csproj.GenerateResource.cache
+C:\GitLocal\SimpleApi\SimpleApi\SimpleApi\obj\Debug\SimpleApi.Migrations.Initial.resources

@@ -10,7 +10,7 @@ namespace SimpleApi.DAL
 {
     public class SimpleApiContext : DbContext
     {
-        public SimpleApiContext() : base("SimpleApiDb")
+        public SimpleApiContext() : base("simpleapidb")
         {
         }
 
