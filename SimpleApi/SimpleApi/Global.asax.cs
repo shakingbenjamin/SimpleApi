@@ -4,6 +4,7 @@
     using System.Web;
     using Funq;
     using ServiceStack;
+    using SimpleApi.Interfaces;
     using SimpleApi.Services;
 
     public class Global : HttpApplication
@@ -48,7 +49,7 @@
         public class AppHost : AppHostBase
         {
             // naming the application and where to find el services
-            public AppHost() : base("Simple API Services", typeof(HelloService).Assembly) { }
+            public AppHost() : base("Simple Api", typeof(ISimpleApiClient).Assembly) { }
 
             public override void Configure(Container container)
             {

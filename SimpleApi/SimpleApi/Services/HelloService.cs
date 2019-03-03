@@ -1,10 +1,11 @@
 ﻿namespace SimpleApi.Services
 {
     using ServiceStack;
+    using SimpleApi.Interfaces;
     using SimpleApi.RequestDTOs;
     using SimpleApi.ResponseDTOs;
 
-    public class HelloService : Service
+    public class HelloService : Service, IHelloService
     {
         public object Any(HelloRequest request)
         {

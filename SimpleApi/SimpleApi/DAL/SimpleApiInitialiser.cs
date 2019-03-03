@@ -10,7 +10,7 @@
         {
             var addresses = new List<Address>
             {
-                new Address { NameOrNumber = "", Street = "", City = "", Province = "", PostCode = ""}
+                new Address { NameOrNumber = "Flat 50", Street = "Kings Court", City = "Guildford", Province = "Surrey", PostCode = "GU23 4DT"}
             };
 
             addresses.ForEach(a => context.Addresses.Add(a));
