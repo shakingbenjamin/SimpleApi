@@ -8,7 +8,17 @@
     {
         public object Any(HelloRequest request)
         {
-            return new HelloResponse { Result = $"Hello {request.Name}" };
+            var message = string.Empty;
+            if (request.Name.ToLower() == "holly")
+            {
+                message = "Hi Holly, know you love this 'dork shit.";
+            }
+            else
+            {
+                message = $"Hello {request.Name}";
+            }
+            
+            return new HelloResponse { Result = message };
         }
     }
 }
