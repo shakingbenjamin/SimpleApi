@@ -17,6 +17,7 @@
         {
             var contact = new Contact();
             contact = context.Contacts.FirstOrDefault(c => c.LastName.ToLower() == request.LastName.ToLower());
+            contact.Address = context.Addresses.FirstOrDefault(a => a.ID == contact.ID);
             return new GetContactResponse { Result = contact };
         }
 

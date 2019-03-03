@@ -14,12 +14,11 @@
             };
 
             addresses.ForEach(a => context.Addresses.Add(a));
-            context.SaveChanges();
 
             var contacts = new List<Contact>
             {
-                new Contact { FirstName="Jane", LastName="Doe", Title="Miss"},
-                new Contact { FirstName="Davie", LastName="Jones", Title="Mr" }
+                new Contact { FirstName="Jane", LastName="Doe", Title="Miss", Mobile = "07525175792" },
+                new Contact { FirstName="Davie", LastName="Jones", Title="Mr", Mobile = "0758634695" }
             };
 
 

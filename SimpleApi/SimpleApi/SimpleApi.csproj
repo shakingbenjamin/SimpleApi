@@ -115,6 +115,15 @@
     <Compile Include="Interfaces\IContactService.cs" />
     <Compile Include="Interfaces\IHelloService.cs" />
     <Compile Include="Interfaces\ISimpleApiClient.cs" />
+    <Compile Include="Migrations\201903032250520_InitialCreate.cs" />
+    <Compile Include="Migrations\201903032250520_InitialCreate.Designer.cs">
+      <DependentUpon>201903032250520_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903032315037_Initial.cs" />
+    <Compile Include="Migrations\201903032315037_Initial.Designer.cs">
+      <DependentUpon>201903032315037_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Services\SimpleApiClient.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -136,7 +145,14 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201903032250520_InitialCreate.resx">
+      <DependentUpon>201903032250520_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903032315037_Initial.resx">
+      <DependentUpon>201903032315037_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
