@@ -2,17 +2,18 @@
 {
     using ServiceStack;
     using SimpleApi.DAL;
+    using SimpleApi.Interfaces;
     using SimpleApi.Models;
     using SimpleApi.RequestDTOs;
     using SimpleApi.ResponseDTOs;
     using System.Collections.Generic;
     using System.Linq;
 
-    public class ContactService : Service
+    public class ContactService : Service, IContactService
     {
         private readonly SimpleApiContext context = new SimpleApiContext();
 
-        public GetContactResponse GetContact(GetContactRequest request)
+        public GetContactResponse Get(GetContactRequest request)
         {
             var contact = new Contact();
             contact = context.Contacts.FirstOrDefault(c => c.LastName.ToLower() == request.LastName.ToLower());
