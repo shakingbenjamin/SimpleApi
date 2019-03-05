@@ -1,17 +1,16 @@
 ﻿namespace SimpleApi.Models
 {
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
+    using ServiceStack.DataAnnotations;
 
+    [Alias("AddressTable")]
     public class Address
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [AutoIncrement]
         public int ID { get; set; }
 
-        public string NameOrNumber { get; set; }
+        public string AddressOne { get; set; }
 
-        public string Street { get; set; }
+        public string AddressTwo { get; set; }
 
         public string City { get; set; }
 

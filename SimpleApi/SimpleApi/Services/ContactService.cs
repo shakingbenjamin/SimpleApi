@@ -8,16 +8,19 @@
     using SimpleApi.ResponseDTOs;
     using System.Collections.Generic;
     using System.Linq;
+    using ServiceStack.OrmLite;
 
     public class ContactService : Service, IContactService
     {
-        private readonly SimpleApiContext context = new SimpleApiContext();
+        //private readonly SimpleApiContext context = new SimpleApiContext();
 
         public GetContactResponse Get(GetContactRequest request)
         {
             var contact = new Contact();
-            contact = context.Contacts.FirstOrDefault(c => c.LastName.ToLower() == request.LastName.ToLower());
-            contact.Address = context.Addresses.FirstOrDefault(a => a.ID == contact.ID);
+            contact = this.Db.Single<Contact>(c => c.LastName.ToLower() == request.LastName.ToLower());
+            contact.Address = this.Db.Single<Address>(a => a.ID == contact.ID);
+            //contact = context.Contacts.FirstOrDefault(c => c.LastName.ToLower() == request.LastName.ToLower());
+            //contact.Address = context.Addresses.FirstOrDefault(a => a.ID == contact.ID);
             return new GetContactResponse { Result = contact };
         }
 

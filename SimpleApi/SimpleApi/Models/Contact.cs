@@ -1,15 +1,18 @@
 ﻿namespace SimpleApi.Models
 {
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
+    using ServiceStack.DataAnnotations;
 
+    [Alias("ContactTable")]
     public class Contact
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [AutoIncrement]
+        [PrimaryKey]
         public int ID { get; set; }
 
+        [References(typeof(Address))]
+        public int AddressID { get; set; }
+
+        [Ignore]
         public string FullName => $"{this.Title} {this.FirstName} {this.LastName}";
 
         public string Title { get; set; }
@@ -20,9 +23,7 @@
 
         public string Mobile { get; set; }
 
-        [ForeignKey("Address")]
-        public int AddressID { get; set; }
-
+        [Ignore]
         public Address Address { get; set; }
     }
 }
